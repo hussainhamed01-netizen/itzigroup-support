@@ -35,4 +35,33 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Contact Form Handler
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const btn = form.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            
+            btn.innerHTML = '<span>Sending...</span>';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+            
+            // Demo send (you can link this to Formspree later)
+            setTimeout(() => {
+                btn.innerHTML = '<span>✓ Message Sent!</span>';
+                btn.style.background = 'linear-gradient(135deg, #4caf50, #66bb6a)';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                    btn.style.background = '';
+                    form.reset();
+                }, 3000);
+            }, 1500);
+        });
+    }
 });

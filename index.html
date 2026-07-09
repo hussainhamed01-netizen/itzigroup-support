@@ -95,7 +95,7 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>You can reach us anytime at <strong>itzigroup12@gmail.com</strong>. We aim to respond to all inquiries within 24-48 hours.</p>
+                        <p>You can reach us anytime at <strong>itzigroup_support@itzigroup.com</strong>. We aim to respond to all inquiries within 24-48 hours.</p>
                     </div>
                 </div>
 
@@ -112,10 +112,34 @@
         </div>
 
         <!-- Contact Box -->
-        <div class="contact-box">
+        <div class="contact-box" id="contact">
             <h2>Still need help?</h2>
             <p>If you couldn't find the answer to your question, our support team is here for you.</p>
-            <a href="mailto:itzigroup12@gmail.com" class="btn btn-primary">Contact Support</a>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="How can we help?">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Describe your issue..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <span>Send Message</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+            </form>
+            
+            <p style="margin-top: 24px; font-size: 14px;">Or email us directly at <a href="mailto:itzigroup_support@itzigroup.com" style="color: var(--orange);">itzigroup_support@itzigroup.com</a></p>
         </div>
     </main>
 
